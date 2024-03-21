@@ -25,7 +25,7 @@ public class Main {
 
                 switch (opcion) {
                     case 1 -> {
-                        ingresarDatos( double[] sismos;
+                        ingresarDatos(double [] sismos;
                     } case 2 -> {
                         buscarMayorSismo( double[] sismos;
                     } case 3 -> {
@@ -46,15 +46,25 @@ public class Main {
     }
     public static double[] ingresarDatos(double [] sismos){
         double valor;
-        for(byte a = 0; a < sismos.length; a++) {
+        for(int i=0; i<167; i++) {
             valor = getRandom(0.1,9.9);
-            sismos[a] = valor;
+            sismos[i] = valor;
             ;
         return sismos;
         }
     public static double getRandom(double valorMinimo,double valorMaximo){
             Random rand = new Random();
             return new double[]{valorMinimo + (valorMaximo - valorMinimo) * rand.nextDouble()};
+        }
+    public static double buscarMayorSismo(double [] sismos){
+            double numeromayor = 0.0;
+            for(int i=0; i<sismos.length; i++){
+                if(sismos[i]>numeromayor){ //
+                    numeromayor = sismos[i];
+                }
+            }
+        System.out.println("El sismo mayor es")
+        System.out.println(numeromayor);
         }
 }
     private static double getRandom(double v, double v1) {
